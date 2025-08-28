@@ -4,6 +4,9 @@
  */
 package Colegio;
 
+import static Colegio.Colegio.alumnoStatic;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Juan
@@ -13,6 +16,8 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
     /**
      * Creates new form FormularioAlumnos
      */
+    private Alumno aux;
+    
     public FormularioAlumnos() {
         initComponents();
     }
@@ -71,6 +76,11 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         });
 
         botonSalir.setText("Salir");
+        botonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,14 +147,24 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cuadoIngresoLegActionPerformed
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
-        // TODO add your handling code here:
+        String a = JOptionPane.showInputDialog(null,"Desea guardar el alumno: "+aux +" ? SI/NO");
+        if(a.equalsIgnoreCase("Si")){
+            alumnoStatic.add(aux);
+            JOptionPane.showMessageDialog(null, "Se ha guardado el alumno: "+ aux.toString());
+        }
+        
     }//GEN-LAST:event_botonGuardarActionPerformed
 
     private void botonNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoActionPerformed
         int aux = Integer.parseInt(cuadoIngresoLeg.getText());
         Alumno a = new Alumno(aux,cuadroIngresoApe.getText(),cuadroIngresoNom.getText());
-        
+        this.aux = a;
+        JOptionPane.showMessageDialog(null,"Se ha creado el alumno: " + a.toString());
     }//GEN-LAST:event_botonNuevoActionPerformed
+
+    private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
+        dispose();
+    }//GEN-LAST:event_botonSalirActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

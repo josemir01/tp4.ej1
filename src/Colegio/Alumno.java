@@ -58,7 +58,12 @@ private HashSet<Materia>lista;
      
        
    } 
-       
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + '}';
+    }
+   
     
     
 }
