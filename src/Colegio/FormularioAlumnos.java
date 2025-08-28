@@ -167,8 +167,16 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cuadoIngresoLegActionPerformed
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
+        String regex = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$";
         try{
         int aux = Integer.parseInt(cuadoIngresoLeg.getText());
+        if(!cuadroIngresoApe.getText().matches(regex)){
+            JOptionPane.showMessageDialog(null, "Porfavor ingrese un Apellido Valido");
+            return;
+        }else if(!cuadroIngresoNom.getText().matches(regex)){
+            JOptionPane.showMessageDialog(null, "Porfavor ingrese un Nombre Valido");
+            return;
+        }
         Alumno a = new Alumno(aux,cuadroIngresoApe.getText(),cuadroIngresoNom.getText());
         if(a != null){
         alumnoStatic.add(a);
