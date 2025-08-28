@@ -46,22 +46,34 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         textoFormulario.setForeground(new java.awt.Color(0, 102, 255));
         textoFormulario.setText("Formulario Alumno");
 
+        textoLegajo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textoLegajo.setForeground(new java.awt.Color(0, 102, 255));
         textoLegajo.setText("Legajo:");
+        textoLegajo.setEnabled(false);
 
+        textoApellido.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textoApellido.setForeground(new java.awt.Color(0, 102, 255));
         textoApellido.setText("Apellido:");
+        textoApellido.setEnabled(false);
 
+        textoNombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textoNombre.setForeground(new java.awt.Color(0, 102, 255));
-        textoNombre.setText("Nombre");
+        textoNombre.setText("Nombre:");
+        textoNombre.setEnabled(false);
 
+        cuadoIngresoLeg.setEnabled(false);
         cuadoIngresoLeg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cuadoIngresoLegActionPerformed(evt);
             }
         });
 
+        cuadroIngresoApe.setEnabled(false);
+
+        cuadroIngresoNom.setEnabled(false);
+
         botonGuardar.setText("Guardar");
+        botonGuardar.setEnabled(false);
         botonGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonGuardarActionPerformed(evt);
@@ -87,7 +99,7 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 101, Short.MAX_VALUE)
+                .addGap(0, 104, Short.MAX_VALUE)
                 .addComponent(textoFormulario)
                 .addGap(89, 89, 89))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -99,43 +111,51 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
                 .addComponent(botonSalir)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(textoLegajo)
-                        .addGap(18, 18, 18)
-                        .addComponent(cuadoIngresoLeg, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(textoApellido)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cuadroIngresoApe))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textoLegajo, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(textoApellido, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(cuadoIngresoLeg, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(cuadroIngresoApe))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
                         .addComponent(textoNombre)
                         .addGap(18, 18, 18)
-                        .addComponent(cuadroIngresoNom)))
+                        .addComponent(cuadroIngresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(textoFormulario)
-                .addGap(43, 43, 43)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoLegajo)
-                    .addComponent(cuadoIngresoLeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoApellido)
-                    .addComponent(cuadroIngresoApe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoNombre)
-                    .addComponent(cuadroIngresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonGuardar)
-                    .addComponent(botonNuevo)
-                    .addComponent(botonSalir))
+                    .addComponent(cuadoIngresoLeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textoLegajo))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(cuadroIngresoApe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cuadroIngresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(botonGuardar)
+                            .addComponent(botonNuevo)
+                            .addComponent(botonSalir)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(textoApellido)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
