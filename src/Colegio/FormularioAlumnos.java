@@ -16,7 +16,7 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
     /**
      * Creates new form FormularioAlumnos
      */
-    private Alumno aux;
+    
     
     public FormularioAlumnos() {
         initComponents();
@@ -167,19 +167,40 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cuadoIngresoLegActionPerformed
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
-        String a = JOptionPane.showInputDialog(null,"Desea guardar el alumno: "+aux +" ? SI/NO");
-        if(a.equalsIgnoreCase("Si")){
-            alumnoStatic.add(aux);
-            JOptionPane.showMessageDialog(null, "Se ha guardado el alumno: "+ aux.toString());
+        try{
+        int aux = Integer.parseInt(cuadoIngresoLeg.getText());
+        Alumno a = new Alumno(aux,cuadroIngresoApe.getText(),cuadroIngresoNom.getText());
+        if(a != null){
+        alumnoStatic.add(a);
+        textoLegajo.setEnabled(false);
+        cuadoIngresoLeg.setEnabled(false);
+        textoApellido.setEnabled(false);
+        cuadroIngresoApe.setEnabled(false);
+        textoNombre.setEnabled(false);
+        cuadroIngresoNom.setEnabled(false);
+        botonGuardar.setEnabled(false);
+        }else{
+            JOptionPane.showMessageDialog(null,"No existe alumno a agregar");
         }
-        
+        JOptionPane.showMessageDialog(null,"Se ha guardado el alumno: " + a.toString());
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Los datos ingresados no son los esperados, intentelo de nuevo.");
+        }
     }//GEN-LAST:event_botonGuardarActionPerformed
 
     private void botonNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoActionPerformed
-        int aux = Integer.parseInt(cuadoIngresoLeg.getText());
-        Alumno a = new Alumno(aux,cuadroIngresoApe.getText(),cuadroIngresoNom.getText());
-        this.aux = a;
-        JOptionPane.showMessageDialog(null,"Se ha creado el alumno: " + a.toString());
+        textoLegajo.setEnabled(true);
+        cuadoIngresoLeg.setEnabled(true);
+        cuadoIngresoLeg.setText("");
+        textoApellido.setEnabled(true);
+        cuadroIngresoApe.setEnabled(true);
+        cuadroIngresoApe.setText("");
+        textoNombre.setEnabled(true);
+        cuadroIngresoNom.setEnabled(true);
+        cuadroIngresoNom.setText("");
+        botonGuardar.setEnabled(true);
+        
+        
     }//GEN-LAST:event_botonNuevoActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
