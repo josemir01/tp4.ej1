@@ -26,23 +26,137 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setClosable(true);
+        textoFormulario = new javax.swing.JLabel();
+        textoLegajo = new javax.swing.JLabel();
+        textoApellido = new javax.swing.JLabel();
+        textoNombre = new javax.swing.JLabel();
+        cuadoIngresoLeg = new javax.swing.JTextField();
+        cuadroIngresoApe = new javax.swing.JTextField();
+        cuadroIngresoNom = new javax.swing.JTextField();
+        botonGuardar = new javax.swing.JButton();
+        botonNuevo = new javax.swing.JButton();
+        botonSalir = new javax.swing.JButton();
+
+        textoFormulario.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        textoFormulario.setForeground(new java.awt.Color(0, 102, 255));
+        textoFormulario.setText("Formulario Alumno");
+
+        textoLegajo.setForeground(new java.awt.Color(0, 102, 255));
+        textoLegajo.setText("Legajo:");
+
+        textoApellido.setForeground(new java.awt.Color(0, 102, 255));
+        textoApellido.setText("Apellido:");
+
+        textoNombre.setForeground(new java.awt.Color(0, 102, 255));
+        textoNombre.setText("Nombre");
+
+        cuadoIngresoLeg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cuadoIngresoLegActionPerformed(evt);
+            }
+        });
+
+        botonGuardar.setText("Guardar");
+        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarActionPerformed(evt);
+            }
+        });
+
+        botonNuevo.setText("Nuevo");
+        botonNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonNuevoActionPerformed(evt);
+            }
+        });
+
+        botonSalir.setText("Salir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 101, Short.MAX_VALUE)
+                .addComponent(textoFormulario)
+                .addGap(89, 89, 89))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonGuardar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonNuevo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonSalir)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(textoLegajo)
+                        .addGap(18, 18, 18)
+                        .addComponent(cuadoIngresoLeg, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(textoApellido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cuadroIngresoApe))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(textoNombre)
+                        .addGap(18, 18, 18)
+                        .addComponent(cuadroIngresoNom)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(textoFormulario)
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoLegajo)
+                    .addComponent(cuadoIngresoLeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoApellido)
+                    .addComponent(cuadroIngresoApe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoNombre)
+                    .addComponent(cuadroIngresoNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonGuardar)
+                    .addComponent(botonNuevo)
+                    .addComponent(botonSalir))
+                .addContainerGap())
         );
 
-        pack();
+        setBounds(0, 0, 406, 310);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cuadoIngresoLegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuadoIngresoLegActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cuadoIngresoLegActionPerformed
+
+    private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonGuardarActionPerformed
+
+    private void botonNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoActionPerformed
+        int aux = Integer.parseInt(cuadoIngresoLeg.getText());
+        Alumno a = new Alumno(aux,cuadroIngresoApe.getText(),cuadroIngresoNom.getText());
+        
+    }//GEN-LAST:event_botonNuevoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonGuardar;
+    private javax.swing.JButton botonNuevo;
+    private javax.swing.JButton botonSalir;
+    private javax.swing.JTextField cuadoIngresoLeg;
+    private javax.swing.JTextField cuadroIngresoApe;
+    private javax.swing.JTextField cuadroIngresoNom;
+    private javax.swing.JLabel textoApellido;
+    private javax.swing.JLabel textoFormulario;
+    private javax.swing.JLabel textoLegajo;
+    private javax.swing.JLabel textoNombre;
     // End of variables declaration//GEN-END:variables
 }

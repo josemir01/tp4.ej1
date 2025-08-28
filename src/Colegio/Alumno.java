@@ -10,9 +10,10 @@ private String apellido;
 private String nombre;
 private HashSet<Materia>lista;
 
-    public Alumno(int legajo, String apellido) {
+    public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
+        this.nombre = nombre;
         this.lista=new HashSet<>();
     }
 
