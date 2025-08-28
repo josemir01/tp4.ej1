@@ -179,10 +179,11 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         textoNombre.setEnabled(false);
         cuadroIngresoNom.setEnabled(false);
         botonGuardar.setEnabled(false);
+        botonNuevo.setEnabled(true);
         }else{
             JOptionPane.showMessageDialog(null,"No existe alumno a agregar");
         }
-        JOptionPane.showMessageDialog(null,"Se ha guardado el alumno: " + a.toString());
+        JOptionPane.showMessageDialog(null,"Se ha guardado el alumno: " + a.getApellido() +" "+ a.getNombre());
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,"Los datos ingresados no son los esperados, intentelo de nuevo.");
         }
@@ -199,6 +200,7 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         cuadroIngresoNom.setEnabled(true);
         cuadroIngresoNom.setText("");
         botonGuardar.setEnabled(true);
+        botonNuevo.setEnabled(false);
         
         
     }//GEN-LAST:event_botonNuevoActionPerformed
