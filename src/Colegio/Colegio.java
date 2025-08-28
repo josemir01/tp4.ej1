@@ -27,16 +27,15 @@ public class Colegio extends javax.swing.JFrame {
     private void initComponents() {
 
         jdpEscritorio = new javax.swing.JDesktopPane();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
+        jMenuBar = new javax.swing.JMenuBar();
+        jmAlumno = new javax.swing.JMenu();
+        jmiAgregarAlumno = new javax.swing.JMenuItem();
+        jmiBorrarAlumno = new javax.swing.JMenuItem();
+        jmMateria = new javax.swing.JMenu();
+        jmiAgregarMateria = new javax.swing.JMenuItem();
+        jmiBorrarMateria = new javax.swing.JMenuItem();
+        jmRegistro = new javax.swing.JMenu();
+        jmiFormulario = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Base de Datos del Colegio");
@@ -45,69 +44,81 @@ public class Colegio extends javax.swing.JFrame {
         jdpEscritorio.setLayout(jdpEscritorioLayout);
         jdpEscritorioLayout.setHorizontalGroup(
             jdpEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 640, Short.MAX_VALUE)
         );
         jdpEscritorioLayout.setVerticalGroup(
             jdpEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGap(0, 430, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Alumno");
+        jmAlumno.setText("Alumno");
 
-        jMenuItem1.setText("Agregar Alumno");
-        jMenuItem1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jMenuItem1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jmiAgregarAlumno.setText("Agregar Alumno");
+        jmiAgregarAlumno.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jmiAgregarAlumno.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jmiAgregarAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jmiAgregarAlumnoActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jmAlumno.add(jmiAgregarAlumno);
 
-        jMenuItem2.setText("Borrar Alumno");
-        jMenuItem2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jMenuItem2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jMenu1.add(jMenuItem2);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Materia");
-
-        jMenuItem3.setText("Agregar Materia");
-        jMenuItem3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jMenuItem3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jmiBorrarAlumno.setText("Borrar Alumno");
+        jmiBorrarAlumno.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jmiBorrarAlumno.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jmiBorrarAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jmiBorrarAlumnoActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jmAlumno.add(jmiBorrarAlumno);
 
-        jMenuItem5.setText("Borrar Materia");
-        jMenuItem5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jMenuItem5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        jMenuBar.add(jmAlumno);
+
+        jmMateria.setText("Materia");
+
+        jmiAgregarMateria.setText("Agregar Materia");
+        jmiAgregarMateria.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jmiAgregarMateria.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jmiAgregarMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                jmiAgregarMateriaActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem5);
+        jmMateria.add(jmiAgregarMateria);
 
-        jMenuBar1.add(jMenu2);
+        jmiBorrarMateria.setText("Borrar Materia");
+        jmiBorrarMateria.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jmiBorrarMateria.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jmiBorrarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiBorrarMateriaActionPerformed(evt);
+            }
+        });
+        jmMateria.add(jmiBorrarMateria);
 
-        jMenu3.setText("Registro");
+        jMenuBar.add(jmMateria);
 
-        jMenuItem4.setText("Inscripcion");
-        jMenuItem4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jMenuItem4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jMenu3.add(jMenuItem4);
+        jmRegistro.setText("Registro");
+        jmRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmRegistroActionPerformed(evt);
+            }
+        });
 
-        jMenuBar1.add(jMenu3);
+        jmiFormulario.setText("Formulario");
+        jmiFormulario.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jmiFormulario.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jmiFormulario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiFormularioActionPerformed(evt);
+            }
+        });
+        jmRegistro.add(jmiFormulario);
 
-        jMenu4.setText("Salir");
-        jMenuBar1.add(jMenu4);
+        jMenuBar.add(jmRegistro);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -123,17 +134,44 @@ public class Colegio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    private void jmiAgregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarAlumnoActionPerformed
+        FormularioAlumnos fa = new FormularioAlumnos();
+        jdpEscritorio.add(fa);
+        fa.setVisible(true);
+        fa.toFront();
+    }//GEN-LAST:event_jmiAgregarAlumnoActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void jmiAgregarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarMateriaActionPerformed
+        FormularioMaterias fm = new FormularioMaterias();
+        jdpEscritorio.add(fm);
+        fm.setVisible(true);
+        fm.toFront();
+    }//GEN-LAST:event_jmiAgregarMateriaActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    private void jmiBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBorrarMateriaActionPerformed
+        BorrarMateria bm = new BorrarMateria();
+        jdpEscritorio.add(bm);
+        bm.setVisible(true);
+        bm.toFront();
+    }//GEN-LAST:event_jmiBorrarMateriaActionPerformed
+
+    private void jmiBorrarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBorrarAlumnoActionPerformed
+        BorrarAlumno ba = new BorrarAlumno();
+        jdpEscritorio.add(ba);
+        ba.setVisible(true);
+        ba.toFront();
+    }//GEN-LAST:event_jmiBorrarAlumnoActionPerformed
+
+    private void jmRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmRegistroActionPerformed
+
+    }//GEN-LAST:event_jmRegistroActionPerformed
+
+    private void jmiFormularioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiFormularioActionPerformed
+        FormularioInscripcion fi = new FormularioInscripcion();
+        jdpEscritorio.add(fi);
+        fi.setVisible(true);
+        fi.toFront();
+    }//GEN-LAST:event_jmiFormularioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,16 +210,15 @@ public class Colegio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JDesktopPane jdpEscritorio;
+    private javax.swing.JMenu jmAlumno;
+    private javax.swing.JMenu jmMateria;
+    private javax.swing.JMenu jmRegistro;
+    private javax.swing.JMenuItem jmiAgregarAlumno;
+    private javax.swing.JMenuItem jmiAgregarMateria;
+    private javax.swing.JMenuItem jmiBorrarAlumno;
+    private javax.swing.JMenuItem jmiBorrarMateria;
+    private javax.swing.JMenuItem jmiFormulario;
     // End of variables declaration//GEN-END:variables
 }

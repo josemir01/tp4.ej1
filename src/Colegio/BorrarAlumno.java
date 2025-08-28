@@ -8,12 +8,12 @@ package Colegio;
  *
  * @author Juan
  */
-public class FormularioInscripcion extends javax.swing.JInternalFrame {
+public class BorrarAlumno extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form FormularioInscripcion
+     * Creates new form BorrarAlumno
      */
-    public FormularioInscripcion() {
+    public BorrarAlumno() {
         initComponents();
     }
 
