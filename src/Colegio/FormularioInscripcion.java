@@ -29,6 +29,14 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
            
         }    
        }
+        if(materiaStatic!=null){
+        for(Materia aux : materiaStatic){
+
+               jComboBox1.addItem(aux);  
+            
+           
+        }    
+       }
     }
 
     /**
@@ -136,11 +144,12 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
 
-        if(materiaStatic!=null){
-            
-          for (Materia aux : materiaStatic) {
-            jComboBox1.addItem(aux);
-            }     
+        Alumno alumnoseleccionado=(Alumno) jComboBox2.getSelectedItem();
+        Materia materiaseleccionada=(Materia) jComboBox1.getSelectedItem();
+        if(alumnoseleccionado!=null&& materiaseleccionada!=null){
+            alumnoseleccionado.agregarMaterias(materiaseleccionada);
+        }else{
+            JOptionPane.showMessageDialog(null, "no se a seleccionado un alumno o una materia");
         }
          
             
