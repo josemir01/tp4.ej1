@@ -3,8 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
             <file>file:/C:/Users/Juan/OneDrive/Documentos/tp4.ej1/src/Colegio/Colegio.java</file>
             <file>file:/C:/Users/Juan/OneDrive/Documentos/tp4.ej1/src/Colegio/FormularioAlumnos.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/Hernan/Desktop/TUDS/tp4.ej1/src/Colegio/Materia.java</file>
+            <file>file:/C:/Users/Hernan/Desktop/TUDS/tp4.ej1/src/Colegio/FormularioInscripcion.java</file>
+            <file>file:/C:/Users/Hernan/Desktop/TUDS/tp4.ej1/src/Colegio/FormularioAlumnos.java</file>
+            <file>file:/C:/Users/Hernan/Desktop/TUDS/tp4.ej1/src/Colegio/Colegio.java</file>
+            <file>file:/C:/Users/Hernan/Desktop/TUDS/tp4.ej1/src/Colegio/BorrarMateria.java</file>
+            <file>file:/C:/Users/Hernan/Desktop/TUDS/tp4.ej1/src/Colegio/BorrarAlumno.java</file>
+            <file>file:/C:/Users/Hernan/Desktop/TUDS/tp4.ej1/src/Colegio/Alumno.java</file>
+=======
+            <file>file:/C:/Users/Juan/OneDrive/Documentos/tp4.ej1/src/Colegio/Colegio.java</file>
+            <file>file:/C:/Users/Juan/OneDrive/Documentos/tp4.ej1/src/Colegio/FormularioAlumnos.java</file>
+>>>>>>> 1819f9b94ef0afd86b3e3a53bd1fbb9944c13ad3
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>
