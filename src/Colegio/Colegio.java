@@ -210,10 +210,8 @@ public class Colegio extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Colegio().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Colegio().setVisible(true);
         });
         
         
