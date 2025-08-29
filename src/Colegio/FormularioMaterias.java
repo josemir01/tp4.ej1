@@ -4,6 +4,9 @@
  */
 package Colegio;
 
+import javax.swing.JOptionPane;
+import static Colegio.Colegio.materiaStatic;
+
 /**
  *
  * @author Juan
@@ -26,23 +29,180 @@ public class FormularioMaterias extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextFieldCodigoMateria = new javax.swing.JTextField();
+        jTextFieldNombreMateria = new javax.swing.JTextField();
+        jTextFieldAñoMateria = new javax.swing.JTextField();
+        jButtonNuevaMateria = new javax.swing.JButton();
+        jButtonSalirFormMateria = new javax.swing.JButton();
+        jButtonGuardarMateria = new javax.swing.JButton();
+
         setClosable(true);
+
+        jLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 20)); // NOI18N
+        jLabel1.setText("Formulario Materias");
+
+        jLabel2.setText("Codigo de la materia: ");
+
+        jLabel3.setText("Nombre de la materia: ");
+
+        jLabel4.setText("Año de la materia: ");
+
+        jTextFieldCodigoMateria.setEnabled(false);
+        jTextFieldCodigoMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCodigoMateriaActionPerformed(evt);
+            }
+        });
+
+        jTextFieldNombreMateria.setEnabled(false);
+        jTextFieldNombreMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreMateriaActionPerformed(evt);
+            }
+        });
+
+        jTextFieldAñoMateria.setEnabled(false);
+
+        jButtonNuevaMateria.setText("Nuevo");
+        jButtonNuevaMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNuevaMateriaActionPerformed(evt);
+            }
+        });
+
+        jButtonSalirFormMateria.setText("Salir");
+        jButtonSalirFormMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalirFormMateriaActionPerformed(evt);
+            }
+        });
+
+        jButtonGuardarMateria.setText("Guardar");
+        jButtonGuardarMateria.setEnabled(false);
+        jButtonGuardarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGuardarMateriaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(104, 104, 104))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldNombreMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldCodigoMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldAñoMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButtonGuardarMateria)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonNuevaMateria)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonSalirFormMateria)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextFieldCodigoMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextFieldNombreMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jTextFieldAñoMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonNuevaMateria)
+                    .addComponent(jButtonSalirFormMateria)
+                    .addComponent(jButtonGuardarMateria))
+                .addGap(16, 16, 16))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTextFieldCodigoMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCodigoMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCodigoMateriaActionPerformed
+
+    private void jTextFieldNombreMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNombreMateriaActionPerformed
+
+    private void jButtonSalirFormMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirFormMateriaActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButtonSalirFormMateriaActionPerformed
+
+    private void jButtonNuevaMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaMateriaActionPerformed
+        jTextFieldAñoMateria.setEnabled(true);
+        jTextFieldCodigoMateria.setEnabled(true);
+        jTextFieldNombreMateria.setEnabled(true);
+        jButtonNuevaMateria.setEnabled(false);
+        jButtonGuardarMateria.setEnabled(true);
+    }//GEN-LAST:event_jButtonNuevaMateriaActionPerformed
+
+    private void jButtonGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarMateriaActionPerformed
+        String regex = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$";
+        try {
+            if (!jTextFieldNombreMateria.getText().matches(regex) || jTextFieldCodigoMateria.getText().trim().isEmpty() || jTextFieldNombreMateria.getText().trim().isEmpty() || jTextFieldAñoMateria.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Debe de rellenar todos los campos con los datos requeridos.");
+            } else {
+                int codigo = Integer.parseInt(jTextFieldCodigoMateria.getText());
+                int año = Integer.parseInt(jTextFieldAñoMateria.getText());
+                Materia materia0 = new Materia(codigo, jTextFieldNombreMateria.getText(), año);
+                materiaStatic.add(materia0);
+                JOptionPane.showMessageDialog(this, "Materia creada.");
+                jTextFieldCodigoMateria.setText("");
+                jTextFieldCodigoMateria.setEnabled(false);
+                jTextFieldNombreMateria.setText("");
+                jTextFieldNombreMateria.setEnabled(false);
+                jTextFieldAñoMateria.setText("");
+                jTextFieldAñoMateria.setEnabled(false);
+                jButtonGuardarMateria.setEnabled(false);
+                jButtonNuevaMateria.setEnabled(true);
+            }
+        } catch (NumberFormatException nfe) {
+            JOptionPane.showMessageDialog(this, "Error: los datos ingresados no son los requeridos.");
+        }
+    }//GEN-LAST:event_jButtonGuardarMateriaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonGuardarMateria;
+    private javax.swing.JButton jButtonNuevaMateria;
+    private javax.swing.JButton jButtonSalirFormMateria;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField jTextFieldAñoMateria;
+    private javax.swing.JTextField jTextFieldCodigoMateria;
+    private javax.swing.JTextField jTextFieldNombreMateria;
     // End of variables declaration//GEN-END:variables
 }

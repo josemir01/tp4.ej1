@@ -144,16 +144,6 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
 
-        Alumno alumnoseleccionado=(Alumno) jComboBox2.getSelectedItem();
-        Materia materiaseleccionada=(Materia) jComboBox1.getSelectedItem();
-        if(alumnoseleccionado!=null&& materiaseleccionada!=null){
-            alumnoseleccionado.agregarMaterias(materiaseleccionada);
-        }else{
-            JOptionPane.showMessageDialog(null, "no se a seleccionado un alumno o una materia");
-        }
-         
-            
-       
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
@@ -161,15 +151,16 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        Alumno alumnoseleccionado=(Alumno) jComboBox2.getSelectedItem();
-        Materia materiaseleccionada=(Materia) jComboBox1.getSelectedItem();
-        if(alumnoseleccionado!=null&& materiaseleccionada!=null){
+
+        Alumno alumnoseleccionado = (Alumno) jComboBox2.getSelectedItem();
+        Materia materiaseleccionada = (Materia) jComboBox1.getSelectedItem();
+        if (alumnoseleccionado != null && materiaseleccionada != null) {
             alumnoseleccionado.agregarMaterias(materiaseleccionada);
-        }else{
-            JOptionPane.showMessageDialog(null, "no se a seleccionado un alumno o una materia");
+            JOptionPane.showMessageDialog(this, "Se ha inscrito el alumno a la materia.");
+        } else {
+            JOptionPane.showMessageDialog(this, "No se ha seleccionado un alumno o una materia.");
         }
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
