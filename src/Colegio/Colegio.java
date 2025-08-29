@@ -144,30 +144,38 @@ public class Colegio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmiAgregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarAlumnoActionPerformed
+        jdpEscritorio.removeAll();
+        jdpEscritorio.repaint();
         FormularioAlumnos fa = new FormularioAlumnos();
-        jdpEscritorio.add(fa);
         fa.setVisible(true);
+        jdpEscritorio.add(fa);
         fa.toFront();
     }//GEN-LAST:event_jmiAgregarAlumnoActionPerformed
 
     private void jmiAgregarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAgregarMateriaActionPerformed
+        jdpEscritorio.removeAll();
+        jdpEscritorio.repaint();
         FormularioMaterias fm = new FormularioMaterias();
-        jdpEscritorio.add(fm);
         fm.setVisible(true);
+        jdpEscritorio.add(fm);
         fm.toFront();
     }//GEN-LAST:event_jmiAgregarMateriaActionPerformed
 
     private void jmiBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBorrarMateriaActionPerformed
+        jdpEscritorio.removeAll();
+        jdpEscritorio.repaint();
         BorrarMateria bm = new BorrarMateria();
-        jdpEscritorio.add(bm);
         bm.setVisible(true);
+        jdpEscritorio.add(bm);
         bm.toFront();
     }//GEN-LAST:event_jmiBorrarMateriaActionPerformed
 
     private void jmiBorrarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBorrarAlumnoActionPerformed
+        jdpEscritorio.removeAll();
+        jdpEscritorio.repaint();
         BorrarAlumno ba = new BorrarAlumno();
-        jdpEscritorio.add(ba);
         ba.setVisible(true);
+        jdpEscritorio.add(ba);
         ba.toFront();
     }//GEN-LAST:event_jmiBorrarAlumnoActionPerformed
 
@@ -176,15 +184,14 @@ public class Colegio extends javax.swing.JFrame {
     }//GEN-LAST:event_jmRegistroActionPerformed
 
     private void jmiFormularioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiFormularioActionPerformed
+        jdpEscritorio.removeAll();
+        jdpEscritorio.repaint();
         FormularioInscripcion fi = new FormularioInscripcion();
-        jdpEscritorio.add(fi);
         fi.setVisible(true);
+        jdpEscritorio.add(fi);
         fi.toFront();
     }//GEN-LAST:event_jmiFormularioActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
 //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
