@@ -90,13 +90,16 @@ public class BorrarAlumno extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jcbBorrarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbBorrarAlumnoActionPerformed
-
+       
     }//GEN-LAST:event_jcbBorrarAlumnoActionPerformed
 
     private void botonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBorrarActionPerformed
     Alumno aux=(Alumno) jcbBorrarAlumno.getSelectedItem();
        if(aux!=null){
-            jcbBorrarAlumno.removeItem(aux);
+           alumnoStatic.remove(aux);
+           jcbBorrarAlumno.removeItem(aux);
+           JOptionPane.showMessageDialog(this, "Alumno eliminado:" + aux);
+            
         } else {
             JOptionPane.showMessageDialog(null,"Ingrese un alumno antes de eliminar.");
         }
