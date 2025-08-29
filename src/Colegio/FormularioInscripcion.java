@@ -19,6 +19,15 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
     public FormularioInscripcion() {
         initComponents();
         
+        
+        if(alumnoStatic!=null){
+        for(Alumno aux : alumnoStatic){
+
+               jComboBox2.addItem(aux);  
+            
+           
+        }    
+       }
     }
 
     /**
@@ -98,6 +107,7 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
 
         if(materiaStatic!=null){
+            
           for (Materia aux : materiaStatic) {
             jComboBox1.addItem(aux);
             }     
@@ -109,13 +119,6 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
 
-       if(alumnoStatic!=null){
-        for(Alumno aux : alumnoStatic) {
-            jComboBox2.addItem(aux);
-        }    
-       }
-          
-       
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
 
