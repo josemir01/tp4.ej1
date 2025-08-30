@@ -4,6 +4,9 @@
  */
 package Colegio;
 
+import static Colegio.Colegio.materiaStatic;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Juan
@@ -15,6 +18,13 @@ public class BorrarMateria extends javax.swing.JInternalFrame {
      */
     public BorrarMateria() {
         initComponents();
+        
+        if (materiaStatic != null) {
+            for (Materia aux : materiaStatic) {
+                jcbListaMaterias.addItem(aux);
+                
+            }
+        }
     }
 
     /**
@@ -26,23 +36,74 @@ public class BorrarMateria extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jcbListaMaterias = new javax.swing.JComboBox<>();
+        jbBorrarMateria = new javax.swing.JButton();
+
         setClosable(true);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel1.setText("Borrar Materia");
+
+        jbBorrarMateria.setText("Borrar");
+        jbBorrarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBorrarMateriaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(121, 121, 121)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(107, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jcbListaMaterias, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(97, 97, 97))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jbBorrarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jcbListaMaterias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(jbBorrarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarMateriaActionPerformed
+        Materia aux = (Materia) jcbListaMaterias.getSelectedItem();
+        if (aux != null) {
+        materiaStatic.remove(aux);
+        jcbListaMaterias.removeItem(aux);
+        
+        JOptionPane.showMessageDialog(this, "La Materia seleccionada ha sido Borrada.");
+        
+        } else {
+            JOptionPane.showMessageDialog(this, "Error: Debe agregar una materia antes de Borrarla.");
+        }
+        
+    }//GEN-LAST:event_jbBorrarMateriaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jbBorrarMateria;
+    private javax.swing.JComboBox<Materia> jcbListaMaterias;
     // End of variables declaration//GEN-END:variables
 }
