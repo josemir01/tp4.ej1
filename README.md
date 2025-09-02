@@ -1,6 +1,6 @@
 Trabajo en equipo de Interfaces Gráficas de Java
 
-¡Bienvenido a nuestro espacio de trabajo! Este repositorio corresponde al Trabajo Grupal - Unidad 2, Ejercicio 4 (Grupo 4), donde comenzamos a dar nuestros primeros pasos con interfaces gráficas.
+¡Bienvenido a nuestro espacio de trabajo! Este repositorio corresponde al Trabajo Grupal - TP4, Ejercicio 1 (Grupo 4), donde comenzamos a dar nuestros primeros pasos con interfaces gráficas.
 
 Aquí hemos guardado nuestro avance en torno a dicho ejercicio. El repositorio es sumamente exclusivo para ello, como parte de la formación universitaria, propuesto por nuestro profesor del área de Laboratorio de Programación.
 Equipo
